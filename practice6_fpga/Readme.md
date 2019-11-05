@@ -43,3 +43,5 @@ Q1
 
 Q2
 ![](https://github.com/hyeyeonkang/LogicDesign/blob/master/practice6_fpga/figs/quiz2_.jpg)
+
+사진 Q1,Q2는 계속 거꾸로만 올라가서 거꾸로 되어있습니다.

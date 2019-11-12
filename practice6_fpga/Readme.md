@@ -36,10 +36,12 @@ assign       six_digit_seg = {seg_left, seg_right, seg_left, seg_right, seg_left
 ### **FPGA 동작 사진 (3개- 일반, Q1, Q2)**
 
 일반
-![](https://github.com/hyeyeonkang/LogicDesign/blob/master/practice6_fpga/figs/fpga1.jpg)
+![](https://github.com/hyeyeonkang/LogicDesign/blob/master/practice6_fpga/figs/fpga1_.jpg)
 
 Q1
-![](https://github.com/hyeyeonkang/LogicDesign/blob/master/practice6_fpga/figs/quiz1.jpg)
+![](https://github.com/hyeyeonkang/LogicDesign/blob/master/practice6_fpga/figs/quiz1_.jpg)
 
 Q2
-![](https://github.com/hyeyeonkang/LogicDesign/blob/master/practice6_fpga/figs/quiz2.jpg)
+![](https://github.com/hyeyeonkang/LogicDesign/blob/master/practice6_fpga/figs/quiz2_.jpg)
+
+사진 Q1,Q2는 계속 거꾸로만 올라가서 어쩔수없이.. 거꾸로 되어있습니다.

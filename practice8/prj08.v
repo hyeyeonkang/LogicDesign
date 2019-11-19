@@ -641,8 +641,8 @@ controller  u_controller(
 		.o_min_clk        ( min_clk        ),
 		.o_alarm_sec_clk  ( alarm_sec_clk  ),
 		.o_alarm_min_clk  ( alarm_min_clk  ),
-		.i_max_hit_sec	   (	max_hit_sec   	),
-		.i_max_hit_min	   (	max_hit_min	   ),
+		.i_max_hit_sec	  ( max_hit_sec    ),
+		.i_max_hit_min	  ( max_hit_min	   ),
 		.i_sw0            (    i_sw0       ),
 		.i_sw1            (    i_sw1       ),
 		.i_sw2            (    i_sw2       ),
@@ -706,18 +706,18 @@ wire	[41:0]	six_digit_seg	;
 assign		six_digit_seg ={ {2{7'd0}},  seg_min_left, seg_min_right, seg_sec_left, seg_sec_right};
 
 led_disp	u_led_disp(
-			.o_seg		              (	o_seg	),
-			.o_seg_dp	            (	o_seg_dp),
-			.o_seg_enb	           (	o_seg_enb),
+			.o_seg		      (	o_seg	),
+			.o_seg_dp	      (	o_seg_dp),
+			.o_seg_enb	      (	o_seg_enb),
 			.i_six_digit_seg      (	six_digit_seg	),
-			.i_six_dp	            (	6'd0	),
-			.clk		                (	clk	),
-			.rst_n	      	        (	rst_n	));
+			.i_six_dp	      (	6'd0	),
+			.clk		      (	clk	),
+			.rst_n	      	      (	rst_n	));
 
 buzz  u_buzz(
-		.o_buzz       (   o_alarm    ),
-		.i_buzz_en    (   alarm     ),
-		.clk          (      clk   ),
-		.rst_n        (       rst_n  ));
+		.o_buzz       (   o_alarm   	),
+		.i_buzz_en    (   alarm    	),
+		.clk          (   clk   	),
+		.rst_n        (   rst_n	 	));
 
 endmodule

@@ -76,7 +76,7 @@ always @(i_num) begin
 end
 endmodule
 ```
-각 숫자(1~9)와 알파벳(A~F)을 7-세그먼트로 나타냄
+각 숫자(1-9)와 알파벳(A-F)을 7-세그먼트로 나타냄
 
 3) double_fig_sep
 ```verilog 
@@ -201,7 +201,11 @@ always @(posedge clk_1M or negedge rst_n) begin
 	end
 end
 ```
+seq_rx에서 이전값과 현재값을 저장하며 연속적인 수신을 받는다.
+seq_rx[0] 이전값
+ir_rx 현재값
 
+``` verilog
 //		Count Signal Polarity (High & Low)
 reg	[15:0]	cnt_h		;
 reg	[15:0]	cnt_l		;
@@ -220,7 +224,12 @@ always @(posedge clk_1M or negedge rst_n) begin
 		endcase
 	end
 end
+```
+- state를 parameter 네 개로 나눠 정의.
+- high/low 로 나눠서 확인함.
+- 2'b01로 다시 리셋시킴.
 
+``` verilog
 //		State Machine
 reg	[1:0]	state		;
 reg	[5:0]	cnt32		;
@@ -257,7 +266,10 @@ always @(posedge clk_1M or negedge rst_n) begin
 		endcase
 	end
 end
+``` 
+- seq_rx는 rising edge
 
+``` verilog
 //		32bit Custom & Data Code
 reg	[31:0]	data		;
 reg	[31:0]	o_data		;
@@ -280,6 +292,8 @@ end
 
 
 endmodule
+``` 
+- 32 bit data가 신호를 만든다. 
 
 ### waveform  사진
 ![](https://github.com/hyeyeonkang/LogicDesign/blob/master/practice9_fpga/prj09.PNG)
